@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -620,3 +621,15 @@ pre tt:after {
     font-size: 100%;
   }
 }
+=======
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900');
+@import "../../static/css/linearicons.css";
+@import "../../static/css/font-awesome.min.css";
+@import "../../static/css/bootstrap.css";
+@import "../../static/css/magnific-popup.css";
+@import "../../static/css/nice-select.css";
+@import "../../static/css/animate.min.css";
+@import "../../static/css/owl.carousel.css";
+@import "../../static/css/main.css";
+>>>>>>> master
