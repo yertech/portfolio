@@ -39,7 +39,7 @@ const Projects = ({ projectData }) => {
   }
 
   return (
-    <div name="projects" className="section-wrapper">
+    <div name="projects" className="section-wrapper" id="project-area">
       <div className="section-header" style={styles.header}>
         <h2 className="section-title" style={styles.title}>Projects</h2>
         <p className="project-description" style={styles.description}>Browse our current Work</p>

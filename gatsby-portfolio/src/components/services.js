@@ -3,7 +3,7 @@ import React from "react"
 const Services = () => { 
 
   return (
-    <section className="service-area section-gap">
+    <section className="service-area section-gap" id="service-area">
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">

@@ -5,8 +5,6 @@ import { graphql } from "gatsby"
 import "rsuite/dist/styles/rsuite-default.min.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Projects from "../components/projects.js"
-import Work from "../components/work.js"
 import About from "../components/about.js"
 import Contact from "../components/contact.js"
 import Banner from "../components/banner.js"
@@ -15,19 +13,19 @@ import Services from "../components/services.js"
 
 class IndexPage extends React.Component {
     render() {
-        const pageData = this.props.data.cosmicjsPages.metadata
+        const btnData = this.props.data.cosmicjsButtons.metadata
+        const pageDataEN = this.props.data.cosmicjsPages.metadata
         const peopleData = this.props.data.allCosmicjsPeople.edges
         const serviceData = this.props.data.allCosmicjsServices.edges
         const projectData = this.props.data.allCosmicjsProjects.edges
         
         return ( <Layout>
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
-                    <Banner/>
-                    <About peopleData={peopleData} pageData={pageData}/>                  
-                    <Work serviceData={serviceData} pageData={pageData}/>
-                    <JobHistory/>            
+                    <Banner btnData={btnData} bannerPageData={pageDataEN}/>
+                    <About btnData={btnData} aboutPageData={pageDataEN}/>
                     <Services/>         
-                    <Contact name="contact" contactEmail={pageData.contact_email}/>
+                    <JobHistory/>
+                    <Contact name="contact" contactEmail={pageDataEN.contact_email}/>
                   </Layout>
                 )
     }
@@ -39,15 +37,20 @@ IndexPage.propTypes = {
 
 export const query = graphql `
   query Index {
-    cosmicjsPages(slug: { eq: "home" }) {
+    cosmicjsPages(slug: { eq: "home-en" }) {
       metadata {
-        splash_image {
-          url
-        }
-        splash_phrase
+        about_title
+        about_description
         contact_email
-        service_description
-        people_description
+        banner_msg
+        banner_name
+        banner_desc
+      }
+    }
+    cosmicjsButtons(slug: { eq: "buttons" }) {
+      metadata {
+        downloadresumehtml
+        hireme
       }
     }
     allCosmicjsPeople {
