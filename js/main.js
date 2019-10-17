@@ -8,7 +8,6 @@ $(document).ready(function () {
         fitscreen = window_height - header_height;
 
     $(".fullscreen").css("height", window_height)
-    console.log(window_height);
     $(".fitscreen").css("height", fitscreen);
 
     //------- Wow JS Initialized --------// 
