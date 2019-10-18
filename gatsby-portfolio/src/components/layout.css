@@ -15,3 +15,7 @@ section:target {
     padding-top: 150px;
     margin-top: -50px;
 }
+
+.linkFlag {
+    padding-right: 10px !important;
+}

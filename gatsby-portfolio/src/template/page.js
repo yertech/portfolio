@@ -11,32 +11,32 @@ import Banner from "../components/banner.js"
 import JobHistory from "../components/jobhistory.js"
 import Services from "../components/services.js"
 
-class IndexPage extends React.Component {
+class PageTemplate extends React.Component {
     render() {
-        const btnData = this.props.data.cosmicjsButtons.metadata
-        const pageDataEN = this.props.data.cosmicjsPages.metadata
+        const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
+        const pageData = this.props.data.cosmicjsPages.metadata
         const serviceData = this.props.data.allCosmicjsServices.edges
         const projectData = this.props.data.allCosmicjsProjects.edges
-        
-        return ( <Layout>
+        const locale = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
+        return ( <Layout locale={locale}>
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
-                    <Banner btnData={btnData} bannerPageData={pageDataEN}/>
-                    <About btnData={btnData} aboutPageData={pageDataEN}/>
-                    <Services servicesPageData={pageDataEN} serviceData={serviceData}/>         
-                    <JobHistory jobsPageData={pageDataEN}/>
-                    <Contact name="contact" btnData={btnData} contactPageData={pageDataEN}/>
-                  </Layout>
+                    <Banner btnData={btnData} bannerPageData={pageData}/>
+                    <About btnData={btnData} aboutPageData={pageData}/>
+                    <Services servicesPageData={pageData} serviceData={serviceData}/>         
+                    <JobHistory jobsPageData={pageData}/>
+                    <Contact name="contact" btnData={btnData} contactPageData={pageData}/>
+                </Layout>
                 )
     }
 }
 
-IndexPage.propTypes = {
+PageTemplate.propTypes = {
     data: PropTypes.object,
 }
 
-export const query = graphql `
-  query Index {
-    cosmicjsPages(slug: { eq: "home-en" }) {
+export const query = graphql`
+  query Index($pageId: String!,$locale: String!) {
+    cosmicjsPages(id: { eq: $pageId }) {
       metadata {
         about_title
         about_description        
@@ -53,15 +53,19 @@ export const query = graphql `
         contact_email
       }
     }
-    cosmicjsButtons(slug: { eq: "buttons" }) {
-      metadata {
-        downloadresumehtml
-        downloadresume_title
-        hireme
-        hireme_title
+    allCosmicjsButtons(filter: {locale: {eq: $locale}}) {
+      edges {
+        node {
+          metadata {
+            downloadresumehtml
+            downloadresume_title
+            hireme
+            hireme_title
+          }
+        }
       }
     }
-    allCosmicjsServices {
+    allCosmicjsServices(filter: {locale: {eq: $locale}}) {
       edges {
         node {
           title
@@ -73,7 +77,7 @@ export const query = graphql `
         }
       }
     }
-    allCosmicjsProjects {
+    allCosmicjsProjects(filter: {locale: {eq: $locale}}) {
       edges {
         node {
           title
@@ -92,4 +96,4 @@ export const query = graphql `
   }
 `
 
-export default IndexPage
+export default PageTemplate
