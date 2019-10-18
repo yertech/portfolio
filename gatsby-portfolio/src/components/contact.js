@@ -1,5 +1,7 @@
 
 import React from "react"
+import PropTypes from "prop-types"
+import ReactHtmlParser from 'react-html-parser'; 
 
 class Contact extends React.Component {
   
@@ -10,41 +12,27 @@ class Contact extends React.Component {
 			<div className="row">
 				<div className="col-lg-12">
 					<div className="contact-title">
-						<h2>Contact Me</h2>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see
-							some for as low as $.17 each.</p>
+						<h2>{this.props.contactPageData.contact_title}</h2>
+						{ReactHtmlParser(this.props.contactPageData.contact_description)}
 					</div>
 				</div>
 			</div>
 
 			<div className="row mt-80">
-				<div className="col-lg-4 col-md-4">
+				<div className="col-lg-12 col-md-12">
 					<div className="contact-box">
-						<h4>+44 2365 654 8962</h4>
+						<h4>{this.props.contactPageData.contact_number}</h4>
 					</div>
-				</div>
-				<div className="col-lg-4 col-md-4">
 					<div className="contact-box">
-						<h4>information@colorlib.com</h4>
-					</div>
-				</div>
-				<div className="col-lg-4 col-md-4">
-					<div className="contact-box">
-						<h4>kenedyjackson.me</h4>
+						<h4>{this.props.contactPageData.contact_email}</h4>
 					</div>
 				</div>
 			</div>
 
 			<div className="row">
 				<div className="col-lg-12 text-center">
-					<a href="#" className="primary-btn mt-50" data-text="Hire Me">
-						<span>H</span>
-						<span>i</span>
-						<span>r</span>
-						<span>e</span>
-						<span> </span>
-						<span>M</span>
-						<span>e</span>
+					<a href="mailto:ftrey@yertech.org" className="primary-btn mt-50" data-text={this.props.btnData.hireme_title}>
+						{ReactHtmlParser(this.props.btnData.hireme)}
 					</a>
 				</div>
 			</div>
@@ -54,5 +42,9 @@ class Contact extends React.Component {
   }
 }
 
+Contact.propTypes = {
+	contactPageData: PropTypes.object.isRequired,
+	btnData:PropTypes.object.isRequired
+}
 
 export default Contact

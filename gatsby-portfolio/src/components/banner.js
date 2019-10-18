@@ -14,7 +14,7 @@ const Banner = ({ btnData, bannerPageData }) => {
 					<div className="designation mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s">
 					{ReactHtmlParser(bannerPageData.banner_desc)}
 					</div>
-					<a href="mailto:ftrey@yertech.org" className="primary-btn" data-text="Hire Me">
+					<a href="mailto:ftrey@yertech.org" className="primary-btn" data-text={btnData.hireme_title}>
 					{ReactHtmlParser(btnData.hireme)}
 					</a>
 				</div>

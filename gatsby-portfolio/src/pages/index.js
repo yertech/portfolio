@@ -15,7 +15,6 @@ class IndexPage extends React.Component {
     render() {
         const btnData = this.props.data.cosmicjsButtons.metadata
         const pageDataEN = this.props.data.cosmicjsPages.metadata
-        const peopleData = this.props.data.allCosmicjsPeople.edges
         const serviceData = this.props.data.allCosmicjsServices.edges
         const projectData = this.props.data.allCosmicjsProjects.edges
         
@@ -23,9 +22,9 @@ class IndexPage extends React.Component {
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
                     <Banner btnData={btnData} bannerPageData={pageDataEN}/>
                     <About btnData={btnData} aboutPageData={pageDataEN}/>
-                    <Services/>         
-                    <JobHistory/>
-                    <Contact name="contact" contactEmail={pageDataEN.contact_email}/>
+                    <Services servicesPageData={pageDataEN} serviceData={serviceData}/>         
+                    <JobHistory jobsPageData={pageDataEN}/>
+                    <Contact name="contact" btnData={btnData} contactPageData={pageDataEN}/>
                   </Layout>
                 )
     }
@@ -40,30 +39,26 @@ export const query = graphql `
     cosmicjsPages(slug: { eq: "home-en" }) {
       metadata {
         about_title
-        about_description
-        contact_email
+        about_description        
         banner_msg
         banner_name
         banner_desc
+        service_title
+        service_description
+        job_title
+        job_description
+        contact_title
+        contact_description
+        contact_number
+        contact_email
       }
     }
     cosmicjsButtons(slug: { eq: "buttons" }) {
       metadata {
         downloadresumehtml
+        downloadresume_title
         hireme
-      }
-    }
-    allCosmicjsPeople {
-      edges {
-        node {
-          title
-          metadata {
-            image {
-              url
-            }
-            job_title
-          }
-        }
+        hireme_title
       }
     }
     allCosmicjsServices {
@@ -71,9 +66,9 @@ export const query = graphql `
         node {
           title
           metadata {
-            icon
+            class_name
+            title
             description
-            summary
           }
         }
       }
@@ -96,6 +91,5 @@ export const query = graphql `
     }
   }
 `
-
 
 export default IndexPage

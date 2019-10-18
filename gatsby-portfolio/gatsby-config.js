@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-    pathPrefix: "/portfolio",
+    pathPrefix: "/",
     siteMetadata: {
         title: `Gatsby Default Starter`,
         description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -41,7 +41,7 @@ module.exports = {
             resolve: `gatsby-source-cosmicjs`,
             options: {
                 bucketSlug: "yertech-portfolio",
-                objectTypes: ["buttons","pages", "people", "services", "projects"],
+                objectTypes: ["buttons","pages", "services", "projects","jobs"],
                 apiAccess: {
                     read_key: "advOoDk1wXfKCinwZavr0ql3nO3IQhHK91NPccnqqv4gNOSWV2",
                 }

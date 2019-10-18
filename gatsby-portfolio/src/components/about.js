@@ -17,7 +17,7 @@ const About = ({ btnData, aboutPageData }) => {
             <div className="mb-50 wow fadeIn" data-wow-duration=".8s">
             {ReactHtmlParser(aboutPageData.about_description)}
             </div>
-            <a href="#" className="primary-btn" data-text="Download Resume">
+            <a href="#" className="primary-btn" data-text={btnData.downloadresume_title}>
               {ReactHtmlParser(btnData.downloadresumehtml)}
             </a>
           </div>

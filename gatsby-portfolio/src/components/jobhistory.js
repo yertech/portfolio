@@ -1,6 +1,8 @@
 import React from "react"
+import PropTypes from "prop-types"
+import ReactHtmlParser from 'react-html-parser'; 
 
-const JobHistory = () => { 
+const JobHistory = ({ jobsPageData }) => { 
 
   return (
     <section className="job-area section-gap-top section-gap-bottom-90" id="job-area">
@@ -8,9 +10,8 @@ const JobHistory = () => {
 			<div className="row d-flex">
 				<div className="col-lg-12">
 					<div className="section-title">
-						<h2>Job History</h2>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see
-							some for as low as $.17 each.</p>
+						<h2>{jobsPageData.job_title}</h2>
+						{ReactHtmlParser(jobsPageData.job_description)}
 					</div>
 				</div>
 			</div>
@@ -110,8 +111,11 @@ const JobHistory = () => {
 			</div>
 		</div>
 	</section>
-  )
+	)
 }
 
+JobHistory.propTypes = {
+	jobsPageData: PropTypes.object.isRequired,
+}
 
 export default JobHistory

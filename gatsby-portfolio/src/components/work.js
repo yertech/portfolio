@@ -3,23 +3,7 @@ import PropTypes from 'prop-types'
 import { Icon } from 'rsuite'
 
 const Work = ({ pageData, serviceData }) => {
-    return ( 
-        // <div name = "work" className = "section-wrapper" >
-        // <div style = { styles.header } >
-        //     <h2 style = { styles.title } > What We Do </h2>
-        //     <p style = { styles.description } > { pageData.service_description }</p>
-        // </div>
-        // <div className = "wrapper-content services" style = { styles.container }> 
-        //     {serviceData.map(service => ( 
-        //         <div key = { service.node.title } style = { styles.service }>
-        //             <Icon size = "3x"  icon = { service.node.metadata.icon }/> 
-        //             <h5 style = { styles.serviceName } > { service.node.title }</h5> 
-        //             <p style = { styles.serviceDescription } > { service.node.metadata.summary }</p>
-        //             <p style={styles.serviceDescription}>{service.node.metadata.description}</p>
-        //         </div>
-        //     ))} 
-        // </div> 
-        // </div>
+    return (        
         <section className="work-area section-gap-top section-gap-bottom-90" id="work-area">
             <div className="container">
                 <div className="row d-flex justify-content-between align-items-end mb-80">
