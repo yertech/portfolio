@@ -17,8 +17,7 @@ const Layout = ({ children, headerPageData, locale}) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  locale: PropTypes.string.isRequired,
-  headerPageData: PropTypes.object.isRequired
+  locale: PropTypes.string.isRequired
 }
 
 export default Layout

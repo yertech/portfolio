@@ -80,7 +80,7 @@ export const query = graphql`
         menuabout
         menuservices
         menujobs
-        menucontact
+        menucontact        
       }
     }
     allCosmicjsButtons(filter: {locale: {eq: $locale}}) {
@@ -103,6 +103,7 @@ export const query = graphql`
             class_name
             title
             description
+            order
           }
         }
       }
