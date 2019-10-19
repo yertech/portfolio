@@ -4,10 +4,10 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children, locale}) => {
+const Layout = ({ children, headerPageData, locale}) => {
   return (
     <>
-      <Header locale={locale}/>
+      <Header headerPageData={headerPageData} locale={locale}/>
       {children}
       <Footer/>
     </>
@@ -17,7 +17,8 @@ const Layout = ({ children, locale}) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  locale: PropTypes.string.isRequired
+  locale: PropTypes.string.isRequired,
+  headerPageData: PropTypes.object.isRequired
 }
 
 export default Layout

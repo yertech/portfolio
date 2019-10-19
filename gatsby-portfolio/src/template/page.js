@@ -20,7 +20,6 @@ class PageTemplate extends React.Component {
         document.querySelector("body").appendChild(tag);
       }
       loadScript('js/vendor/jquery-2.2.4.min.js')
-      //loadScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossOrigin="anonymous')
       loadScript('js/vendor/bootstrap.min.js')
       loadScript('js/easing.min.js')
       loadScript('js/hoverIntent.js')
@@ -32,7 +31,6 @@ class PageTemplate extends React.Component {
       loadScript('js/jquery.nice-select.min.js')
       loadScript('js/isotope.pkgd.min.js')
       loadScript('js/jquery.circlechart.js')
-      loadScript('js/mail-script.js')
       loadScript('js/wow.min.js')
       loadScript('js/main.js')
     }
@@ -41,15 +39,16 @@ class PageTemplate extends React.Component {
         const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
         const pageData = this.props.data.cosmicjsPages.metadata
         const serviceData = this.props.data.allCosmicjsServices.edges
+        const jobsData = this.props.data.allCosmicjsJobs.edges
         const projectData = this.props.data.allCosmicjsProjects.edges
         const localeLight = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
 
-        return ( <Layout locale={localeLight}>
+        return ( <Layout headerPageData={pageData} locale={localeLight}>
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
                     <Banner btnData={btnData} bannerPageData={pageData}/>
                     <About btnData={btnData} aboutPageData={pageData}/>
                     <Services servicesPageData={pageData} serviceData={serviceData}/>         
-                    <JobHistory jobsPageData={pageData}/>
+                    <JobHistory jobsPageData={pageData} jobsData={jobsData}/>
                     <Contact name="contact" btnData={btnData} contactPageData={pageData}/>
                 </Layout>
                 )
@@ -77,6 +76,11 @@ export const query = graphql`
         contact_description
         contact_number
         contact_email
+        menuhome
+        menuabout
+        menuservices
+        menujobs
+        menucontact
       }
     }
     allCosmicjsButtons(filter: {locale: {eq: $locale}}) {
@@ -99,6 +103,20 @@ export const query = graphql`
             class_name
             title
             description
+          }
+        }
+      }
+    }
+    allCosmicjsJobs(filter: {locale: {eq: $locale}}) {
+      edges {
+        node {
+          title
+          metadata {
+            title
+            location
+            dates
+            description
+            datesHtml
           }
         }
       }

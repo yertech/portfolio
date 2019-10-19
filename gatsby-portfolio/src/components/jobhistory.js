@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import ReactHtmlParser from 'react-html-parser'; 
 
-const JobHistory = ({ jobsPageData }) => { 
+const JobHistory = ({ jobsPageData, jobsData }) => { 
 
   return (
     <section className="job-area section-gap-top section-gap-bottom-90" id="job-area">
@@ -17,97 +17,26 @@ const JobHistory = ({ jobsPageData }) => {
 			</div>
 
 			<div className="row">
-				<div className="col-lg-6">
-					<div className="single-job">
-						<div className="top-sec d-flex justify-content-between">
-							<div className="top-left">
-								<h4>Senior Creative Design</h4>
-								<p>Old Bird IT, New Yorkt</p>
+				{jobsData.map(job => ( 						
+						<div className="col-lg-6" key={job.node.metadata.title}>
+						<div className="single-job">
+							<div className="top-sec d-flex justify-content-between">
+								<div className="top-left">
+									<h4>{job.node.metadata.title}</h4>
+									<p>{job.node.metadata.location}</p>
+								</div>
+								<div className="top-right">
+									<a href="#" className="primary-btn" data-text={job.node.metadata.dates}>
+										{ ReactHtmlParser(job.node.metadata.datesHtml)}
+									</a>
+								</div>
 							</div>
-							<div className="top-right">
-								<a href="#" className="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
+							<div className="bottom-sec wow fadeIn" data-wow-duration="2s">
+							{ ReactHtmlParser(job.node.metadata.description)}
 							</div>
-						</div>
-						<div className="bottom-sec wow fadeIn" data-wow-duration="2s">
-							All users on MySpace will know that there are millions of people out there. Every day besides. All users on My will know
-							that there are millions of people out of the field there.
 						</div>
 					</div>
-				</div>
-
-				<div className="col-lg-6">
-					<div className="single-job">
-						<div className="top-sec d-flex justify-content-between">
-							<div className="top-left">
-								<h4>Senior Visualiser</h4>
-								<p>Old Bird IT, New Yorkt</p>
-							</div>
-							<div className="top-right">
-								<a href="#" className="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div className="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-							All users on MySpace will know that there are millions of people out there. Every day besides. All users on My will know
-							that there are millions of people out of the field there.
-						</div>
-					</div>
-				</div>
-
-				<div className="col-lg-6">
-					<div className="single-job">
-						<div className="top-sec d-flex justify-content-between">
-							<div className="top-left">
-								<h4>Junior Visualiser</h4>
-								<p>Old Bird IT, New Yorkt</p>
-							</div>
-							<div className="top-right">
-								<a href="#" className="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div className="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-							All users on MySpace will know that there are millions of people out there. Every day besides. All users on My will know
-							that there are millions of people out of the field there.
-						</div>
-					</div>
-				</div>
-
-				<div className="col-lg-6">
-					<div className="single-job">
-						<div className="top-sec d-flex justify-content-between">
-							<div className="top-left">
-								<h4>Intern Designer</h4>
-								<p>Old Bird IT, New Yorkt</p>
-							</div>
-							<div className="top-right">
-								<a href="#" className="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div className="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-							All users on MySpace will know that there are millions of people out there. Every day besides. All users on My will know
-							that there are millions of people out of the field there.
-						</div>
-					</div>
-				</div>
+					))}				
 			</div>
 		</div>
 	</section>
@@ -116,6 +45,7 @@ const JobHistory = ({ jobsPageData }) => {
 
 JobHistory.propTypes = {
 	jobsPageData: PropTypes.object.isRequired,
+	jobsData: PropTypes.array.isRequired
 }
 
 export default JobHistory
