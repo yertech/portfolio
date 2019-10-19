@@ -12,13 +12,39 @@ import JobHistory from "../components/jobhistory.js"
 import Services from "../components/services.js"
 
 class PageTemplate extends React.Component {
+    componentDidMount(){
+      var loadScript = function(src) {
+        var tag = document.createElement('script');
+        tag.async = false;
+        tag.src = src;
+        document.querySelector("body").appendChild(tag);
+      }
+      loadScript('js/vendor/jquery-2.2.4.min.js')
+      //loadScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossOrigin="anonymous')
+      loadScript('js/vendor/bootstrap.min.js')
+      loadScript('js/easing.min.js')
+      loadScript('js/hoverIntent.js')
+      loadScript('js/superfish.min.js')
+      loadScript('js/mn-accordion.js')
+      loadScript('js/jquery.ajaxchimp.min.js')
+      loadScript('js/jquery.magnific-popup.min.js')
+      loadScript('js/owl.carousel.min.js')
+      loadScript('js/jquery.nice-select.min.js')
+      loadScript('js/isotope.pkgd.min.js')
+      loadScript('js/jquery.circlechart.js')
+      loadScript('js/mail-script.js')
+      loadScript('js/wow.min.js')
+      loadScript('js/main.js')
+    }
+
     render() {
         const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
         const pageData = this.props.data.cosmicjsPages.metadata
         const serviceData = this.props.data.allCosmicjsServices.edges
         const projectData = this.props.data.allCosmicjsProjects.edges
-        const locale = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
-        return ( <Layout locale={locale}>
+        const localeLight = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
+
+        return ( <Layout locale={localeLight}>
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
                     <Banner btnData={btnData} bannerPageData={pageData}/>
                     <About btnData={btnData} aboutPageData={pageData}/>

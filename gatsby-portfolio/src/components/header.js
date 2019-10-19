@@ -37,7 +37,7 @@ const Header = (locale) => {
               {
                 data.site.siteMetadata.languages.map(lang => {
                   return (
-                    <a key={lang.slug} className="linkFlag" href={`/${lang.slug}`}><img src={"img/" + lang.localized_name[Object.values(locale)] + ".png"}></img></a>                      
+                    <Link key={lang.slug} className="linkFlag" to={`/${lang.slug}`}><img src={"img/" + lang.localized_name[Object.values(locale)] + ".png"}></img></Link>                      
                   )
                 })
               }     
