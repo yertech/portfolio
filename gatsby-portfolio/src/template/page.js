@@ -116,7 +116,7 @@ export const query = graphql`
             location
             dates
             description
-            datesHtml
+            dateshtml
           }
         }
       }

@@ -27,7 +27,7 @@ const JobHistory = ({ jobsPageData, jobsData }) => {
 								</div>
 								<div className="top-right">
 									<a href="#" className="primary-btn" data-text={job.node.metadata.dates}>
-										{ ReactHtmlParser(job.node.metadata.datesHtml)}
+										{ ReactHtmlParser(job.node.metadata.dateshtml)}
 									</a>
 								</div>
 							</div>

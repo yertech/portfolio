@@ -14,6 +14,13 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+
+        <div class="preloader-area">
+          <div class="loader-box">
+            <div class="loader"></div>
+          </div>
+        </div>
+
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
