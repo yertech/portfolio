@@ -19,7 +19,7 @@ const Services = ({ servicesPageData,serviceData }) => {
 				{serviceData.map(service => ( 
 					<div className="col-lg-3 col-md-6" key={ service.node.title}>
 						<div className="single-service wow fadeInUp" data-wow-duration="1s">
-							<span className={ service.node.metadata.class_name}></span>
+							<span className={service.node.metadata.class_name}></span>
 							{ ReactHtmlParser(service.node.metadata.title)}
 							{ ReactHtmlParser(service.node.metadata.description)}
 						</div>
