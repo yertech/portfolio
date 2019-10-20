@@ -963,7 +963,7 @@ th {
 }
 
 .section-gap {
-    padding: 150px 0;
+    padding: 60px 0;
 }
 
 @media (max-width: 1024px) {
@@ -973,7 +973,7 @@ th {
 }
 
 .section-gap-top {
-    padding-top: 150px;
+    padding-top: 60px;
 }
 
 @media (max-width: 1024px) {
@@ -2852,6 +2852,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .home-banner-area {
     background: url(../img/banner-bg.jpg) center;
     background-size: cover;
+}
+
+.fullscreen {
+    height: 100vh;
 }
 
 @media (max-width: 769px) {

@@ -95,7 +95,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsServices(filter: {locale: {eq: $locale}}) {
+    allCosmicjsServices(filter: {locale: {eq: $locale}},sort: {fields: metadata___order}) {
       edges {
         node {
           title

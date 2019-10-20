@@ -15,11 +15,11 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
 
-        <div class="preloader-area">
+        {/* <div class="preloader-area">
           <div class="loader-box">
             <div class="loader"></div>
           </div>
-        </div>
+        </div> */}
 
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
