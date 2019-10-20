@@ -14,10 +14,8 @@ const Footer = ({ siteTitle }) => (
 							<h4>Follow Me</h4>
 						</div>
 						<div className="footer-social">
-							<a href="#"><i className="fa fa-facebook"></i></a>
-							<a href="#"><i className="fa fa-twitter"></i></a>
-							<a href="#"><i className="fa fa-dribbble"></i></a>
-							<a href="#"><i className="fa fa-behance"></i></a>
+							<a href="https://github.com/yertech"><i className="fa fa-github"></i></a>
+							<a href="https://www.linkedin.com/in/fabrice-trey-81482761/?locale=en_US"><i className="fa fa-linkedin"></i></a>
 						</div>
 					</div>
 				</div>
