@@ -35,7 +35,7 @@ const Header = ({ locale, headerPageData }) => {
               <li><a href="#contact-area">{headerPageData.menucontact}</a></li>     */}
               <li><a className="active" href="#">Home</a></li>
               <li><a href="#about-area">About</a></li>
-              <li><a href="#service-area">Services</a></li>
+              <li><a href="#service-area">Skills</a></li>
               <li><a href="#job-area">Jobs</a></li>
               <li><a href="#contact-area">Contact</a></li>    
               <li>
