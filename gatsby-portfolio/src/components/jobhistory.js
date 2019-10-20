@@ -22,7 +22,7 @@ const JobHistory = ({ jobsPageData, jobsData }) => {
 						<div className="single-job">
 							<div className="top-sec d-flex justify-content-between">
 								<div className="top-left">
-									<h4>{job.node.metadata.title}</h4>
+									<h4>{ReactHtmlParser(job.node.metadata.title)}</h4>
 									<p>
 										{job.node.metadata.subtitle}<br/>
 										{job.node.metadata.location}

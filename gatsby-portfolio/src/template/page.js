@@ -108,7 +108,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsJobs(filter: {locale: {eq: $locale}}) {
+    allCosmicjsJobs(filter: {locale: {eq: $locale}},sort: {fields: metadata___orderindex}) {
       edges {
         node {
           title
@@ -119,6 +119,7 @@ export const query = graphql`
             dates
             description
             dateshtml
+            orderindex
           }
         }
       }

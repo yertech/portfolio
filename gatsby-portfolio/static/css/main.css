@@ -2860,7 +2860,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 769px) {
     .home-banner-area .fullscreen {
-        height: 600px !important;
+        height: 100vh !important;
     }
 }
 
@@ -3025,7 +3025,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 991px) {
     .about-area .about-left {
-        display: none;
+        padding-bottom: 10px;
     }
 }
 
