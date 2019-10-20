@@ -114,6 +114,7 @@ export const query = graphql`
           title
           metadata {
             title
+            subtitle
             location
             dates
             description

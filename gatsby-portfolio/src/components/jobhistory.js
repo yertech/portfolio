@@ -23,7 +23,10 @@ const JobHistory = ({ jobsPageData, jobsData }) => {
 							<div className="top-sec d-flex justify-content-between">
 								<div className="top-left">
 									<h4>{job.node.metadata.title}</h4>
-									<p>{job.node.metadata.location}</p>
+									<p>
+										{job.node.metadata.subtitle}<br/>
+										{job.node.metadata.location}
+									</p>
 								</div>
 								<div className="top-right">
 									<a href="#" className="primary-btn" data-text={job.node.metadata.dates}>
