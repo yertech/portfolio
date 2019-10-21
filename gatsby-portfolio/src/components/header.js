@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import {Link} from 'gatsby'
 import PropTypes from "prop-types"
 
-const Header = ({ locale, headerPageData }) => {  
+const Header = ({ locale, headerPageData,isHeaderFixed }) => {  
   const data = useStaticQuery(graphql`
   query SiteTitleQuery {
     site {
@@ -20,11 +20,11 @@ const Header = ({ locale, headerPageData }) => {
   }
   `)
 
-    return (<header id="header">
+    return (<header id="header" className={isHeaderFixed? "header-scrolled":""}>      
       <div className="container main-menu">
         <div className="row align-items-center d-flex">
           <div id="logo">
-            <a href="#"><img src="img/logo.png" alt="" title="" /></a>
+            <a href="#"><img src="/img/logo.png" alt="" title="" /></a>
           </div>
           <nav id="nav-menu-container">
             <ul className="nav-menu">
@@ -42,7 +42,7 @@ const Header = ({ locale, headerPageData }) => {
               {
                 data.site.siteMetadata.languages.map(lang => {
                   return (
-                    <Link key={lang.slug} className="linkFlag" to={`/${lang.slug}`}><img src={"img/" + lang.localized_name[locale] + ".png"}></img></Link>                      
+                    <Link key={lang.slug} className="linkFlag" to={`/${lang.slug}`}><img src={"/img/" + lang.localized_name[locale] + ".png"}></img></Link>                      
                   )
                 })
               }     

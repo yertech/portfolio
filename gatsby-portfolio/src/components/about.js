@@ -8,7 +8,7 @@ const About = ({ btnData, aboutPageData }) => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-lg-6 about-left">
-            <img className="img-fluid" src="img/ftrey.jpg" alt=""/>
+            <img className="img-fluid" src="/img/ftrey.jpg" alt=""/>
           </div>
           <div className="col-lg-5 col-md-12 about-right">
             <div className="section-title">

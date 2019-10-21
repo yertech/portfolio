@@ -31,12 +31,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      </body>
-      <div id="back-top">
-          <a title="Go to Top" href="#">
-              <i className="lnr lnr-arrow-up"></i>
-          </a>
-      </div>
+      </body>      
     </html>
   )
 }
