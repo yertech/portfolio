@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import WOW from "wowjs"
 import "rsuite/dist/styles/rsuite-default.min.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -26,7 +25,7 @@ class PageTemplate extends React.Component {
     }   
 
     componentDidMount(){
-      new WOW.WOW().init();
+      //new WOW().init()
       window.addEventListener('scroll', this.listenScrollEvent) 
     }
 

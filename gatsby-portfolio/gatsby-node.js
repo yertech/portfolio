@@ -11,6 +11,20 @@ const {
     createPage
 } = actions
 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /wowjs/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
   return new Promise((resolve, reject) => {
     const pageTemplate = path.resolve('./src/template/page.js')
     resolve(
