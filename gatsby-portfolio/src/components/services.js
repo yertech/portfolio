@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 const Services = ({ servicesPageData,serviceData }) => { 
 
   return (
-    <section className="service-area section-gap" id="service-area">
+    <section className="service-area section-gap-top section-gap-bottom-90" id="service-area">
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">

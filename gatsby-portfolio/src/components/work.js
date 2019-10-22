@@ -4,7 +4,7 @@ import { Icon } from 'rsuite'
 
 const Work = ({ pageData, serviceData }) => {
     return (        
-        <section className="work-area section-gap-top section-gap-bottom-90" id="work-area">
+        <section className="work-area section-gap-top section-gap-top section-gap-bottom-90" id="work-area">
             <div className="container">
                 <div className="row d-flex justify-content-between align-items-end mb-80">
                     <div className="col-lg-6">

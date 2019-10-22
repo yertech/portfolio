@@ -7,7 +7,7 @@ class Contact extends React.Component {
   
   render() {
    
-    return (<section className="contact-area section-gap" id="contact-area">
+    return (<section className="contact-area section-gap-top section-gap-bottom-90" id="contact-area">
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">

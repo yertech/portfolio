@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const About = ({ btnData, aboutPageData }) => {
     return (
-    <section className="about-area section-gap" id="about-area">
+    <section className="about-area section-gap-top section-gap-bottom-90" id="about-area">
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-lg-6 about-left">

@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 const JobHistory = ({ jobsPageData, jobsData }) => { 
 
   return (
-    <section className="job-area section-gap-top section-gap-bottom-90" id="job-area">
+    <section className="job-area section-gap-top section-gap-top section-gap-bottom-90" id="job-area">
 		<div className="container">
 			<div className="row d-flex">
 				<div className="col-lg-12">
