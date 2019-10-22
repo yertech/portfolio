@@ -10,7 +10,7 @@ class Layout extends React.Component {
   state = {
     sideDrawerOpen: false
   }
-
+  
   drawerToggleClickHandler = () => {
       this.setState((prevState) => {
         return {sideDrawerOpen: !prevState.sideDrawerOpen};
