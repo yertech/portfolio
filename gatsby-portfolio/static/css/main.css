@@ -18,7 +18,9 @@
 
 /*  Basic Style 
 /* =================================== */
-
+html{
+    scroll-behavior: smooth;
+}
 ::-moz-selection {
     /* Code for Firefox */
     background-color: #e45447;

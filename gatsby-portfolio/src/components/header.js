@@ -31,7 +31,8 @@ const Header = ({ locale, headerPageData,isHeaderFixed, drawerToggleClickHandler
           </div>          
           <nav className="nav-menu-container">
             <ul className="nav-menu">
-            {/* <li><a className="active" href="#">{headerPageData.menuhome}</a></li>            
+            
+            {/*<li><a className="active" href="#">{this.headerPageData.menuhome}</a></li>        
             <li><a href="#about-area">{headerPageData.menuabout}</a></li>
             <li><a href="#service-area">{headerPageData.menuservices}</a></li>
             <li><a href="#job-area">{headerPageData.menujobs}</a></li>
