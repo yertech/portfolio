@@ -4,7 +4,6 @@ import Header from "./header"
 import Footer from "./footer"
 import ScrollToTop from "react-scroll-up"
 import "./layout.css"
-import SideDrawer from '../components/SideDrawer/SideDrawer';
 import Backdrop from '../components/Backdrop/Backdrop';
 
 class Layout extends React.Component {
@@ -12,15 +11,16 @@ class Layout extends React.Component {
     sideDrawerOpen: false
   }
 
-  drawerToggleClickHandler = ({hash}) => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-    window.location.hash = hash;
-  };
+  drawerToggleClickHandler = () => {
+      this.setState((prevState) => {
+        return {sideDrawerOpen: !prevState.sideDrawerOpen};
+      });   
+      
+  }
 
-  backdropClickHandler = () => {
+  backdropClickHandler = (hash) => {
     this.setState({sideDrawerOpen: false});
+    window.location.hash = hash;
   };
 
  render() {
@@ -31,8 +31,7 @@ class Layout extends React.Component {
 
   return (
     <>
-      <Header locale={this.props.locale} headerPageData={this.props.headerPageData} isHeaderFixed={this.props.isHeaderFixed} drawerClickHandler={this.drawerToggleClickHandler} />
-      <SideDrawer show={this.state.sideDrawerOpen} locale={this.props.locale} headerPageData={this.props.headerPageData} />
+      <Header locale={this.props.locale} headerPageData={this.props.headerPageData} isHeaderFixed={this.props.isHeaderFixed} drawerToggleClickHandler={this.drawerToggleClickHandler} sideDrawerOpen={this.state.sideDrawerOpen} backdropClickHandler={this.backdropClickHandler}/>
       {backdrop}
       {this.props.children}
       <Footer/>      
