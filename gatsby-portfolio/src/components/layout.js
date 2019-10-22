@@ -12,10 +12,11 @@ class Layout extends React.Component {
     sideDrawerOpen: false
   }
 
-  drawerToggleClickHandler = () => {
+  drawerToggleClickHandler = ({hash}) => {
     this.setState((prevState) => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });
+    window.location.hash = hash;
   };
 
   backdropClickHandler = () => {

@@ -12,7 +12,7 @@ const Header = ({ locale, headerPageData,isHeaderFixed, drawerClickHandler }) =>
           <div id="logo">
             <a href="#"><img src="/img/logo.png" alt="" title="" /></a>
           </div>
-          <NavMenuContainer locale={locale} headerPageData={headerPageData} className={"nav-menu-container"}/>
+          <NavMenuContainer locale={locale} headerPageData={headerPageData} className={"nav-menu-container"} drawerClickHandler={drawerClickHandler}/>
         </div>
       </div>
       <DrawerToggleButton click={drawerClickHandler} />

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import {Link} from 'gatsby'
 
 
-const NavMenuContainer = ({ locale, headerPageData, className }) => {
+const NavMenuContainer = ({ locale, headerPageData, className, drawerClickHandler }) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -27,11 +27,11 @@ const NavMenuContainer = ({ locale, headerPageData, className }) => {
             <li><a href="#service-area">{headerPageData.menuservices}</a></li>
             <li><a href="#job-area">{headerPageData.menujobs}</a></li>
             <li><a href="#contact-area">{headerPageData.menucontact}</a></li> */}
-            <li><a className="active" href="#">Home</a></li>            
-            <li><a href="#about-area">About</a></li>
-            <li><a href="#service-area">Skills</a></li>
-            <li><a href="#job-area">Jobs</a></li>
-            <li><a href="#contact-area">Contact</a></li>             
+            <li><a className="active" onClick={() => drawerClickHandler("#")}>Home</a></li>            
+            <li><a onClick={() => drawerClickHandler("#about-area")}>About</a></li>
+            <li><a onClick={() => drawerClickHandler("#service-area")}>Skills</a></li>
+            <li><a onClick={() => drawerClickHandler("#job-area")}>Jobs</a></li>
+            <li><a onClick={() =>drawerClickHandler("#contact-area")}>Contact</a></li>              
             <li>
             {
             data.site.siteMetadata.languages.map(lang => {
