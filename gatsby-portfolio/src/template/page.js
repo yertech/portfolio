@@ -16,14 +16,14 @@ class PageTemplate extends React.Component {
     state = {
       isHeaderFixed:false
     }
-    
+
     listenScrollEvent = e => {
       if (window.scrollY > 100) {
           this.setState({ isHeaderFixed: true })
         } else {
           this.setState({ isHeaderFixed: false }) 
         }
-    }    
+    }   
 
     componentDidMount(){
       new WOW.WOW().init();
@@ -35,6 +35,7 @@ class PageTemplate extends React.Component {
     }
 
     render() {
+        
         const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
         const pageData = this.props.data.cosmicjsPages.metadata
         const serviceData = this.props.data.allCosmicjsServices.edges
@@ -43,7 +44,6 @@ class PageTemplate extends React.Component {
         const localeLight = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
 
         return ( <Layout headerPageData={pageData} locale={localeLight} isHeaderFixed={this.state.isHeaderFixed}>
-                    <div></div>
                     <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
                     <Banner btnData={btnData} bannerPageData={pageData}/>
                     <About btnData={btnData} aboutPageData={pageData}/>
