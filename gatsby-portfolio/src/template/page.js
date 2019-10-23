@@ -11,63 +11,66 @@ import JobHistory from "../components/jobhistory.js"
 import Services from "../components/services.js"
 
 class PageTemplate extends React.Component {
+  state = {
+    isHeaderFixed: false,
+  }
 
-    state = {
-      isHeaderFixed:false
+  listenScrollEvent = e => {
+    if (window.scrollY > 100) {
+      this.setState({ isHeaderFixed: true })
+    } else {
+      this.setState({ isHeaderFixed: false })
     }
+  }
 
-    listenScrollEvent = e => {
-      if (window.scrollY > 100) {
-          this.setState({ isHeaderFixed: true })
-        } else {
-          this.setState({ isHeaderFixed: false }) 
-        }
-    }   
-
-    componentDidMount(){
-      if (typeof window !== "undefined") {
-        // eslint-disable-next-line global-require
-        require("smooth-scroll")('a[href*="#"]')        
-      }
-      //new WOW().init()
-      window.addEventListener('scroll', this.listenScrollEvent) 
+  componentDidMount() {
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line global-require
+      require("smooth-scroll")('a[href*="#"]')
     }
+    //new WOW().init()
+    window.addEventListener("scroll", this.listenScrollEvent)
+  }
 
-    componentWillUnmount(){
-      window.removeEventListener('scroll', this.listenScrollEvent) 
-    }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.listenScrollEvent)
+  }
 
-    render() {
-        
-        const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
-        const pageData = this.props.data.cosmicjsPages.metadata
-        const serviceData = this.props.data.allCosmicjsServices.edges
-        const jobsData = this.props.data.allCosmicjsJobs.edges
-        const projectData = this.props.data.allCosmicjsProjects.edges
-        const localeLight = this.props.pageContext.locale === 'en-US' ? 'en' : 'fr'
+  render() {
+    const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
+    const pageData = this.props.data.cosmicjsPages.metadata
+    const serviceData = this.props.data.allCosmicjsServices.edges
+    const jobsData = this.props.data.allCosmicjsJobs.edges
+    const projectData = this.props.data.allCosmicjsProjects.edges
+    const localeLight = this.props.pageContext.locale === "en-US" ? "en" : "fr"
 
-        return ( <Layout headerPageData={pageData} locale={localeLight} isHeaderFixed={this.state.isHeaderFixed}>
-                    <SEO title="Home" keywords={[`cosmicjs`,`application`,`react`]}/>
-                    <Banner btnData={btnData} bannerPageData={pageData}/>
-                    <About btnData={btnData} aboutPageData={pageData}/>
-                    <Services servicesPageData={pageData} serviceData={serviceData}/>         
-                    <JobHistory jobsPageData={pageData} jobsData={jobsData}/>
-                    <Contact name="contact" btnData={btnData} contactPageData={pageData}/>
-                </Layout>
-                )
-    }
+    return (
+      <Layout
+        headerPageData={pageData}
+        locale={localeLight}
+        isHeaderFixed={this.state.isHeaderFixed}
+      >
+        <SEO title="Home" keywords={[`cosmicjs`, `application`, `react`]} />
+        <Banner btnData={btnData} bannerPageData={pageData} />
+        <About btnData={btnData} aboutPageData={pageData} />
+        <Services servicesPageData={pageData} serviceData={serviceData} />
+        <JobHistory jobsPageData={pageData} jobsData={jobsData} />
+        <Contact name="contact" btnData={btnData} contactPageData={pageData} />
+      </Layout>
+    )
+  }
 }
 
 PageTemplate.propTypes = {
-    data: PropTypes.object,
+  data: PropTypes.object,
 }
 
 export const query = graphql`
-  query Index($pageId: String!,$locale: String!) {
+  query Index($pageId: String!, $locale: String!) {
     cosmicjsPages(id: { eq: $pageId }) {
       metadata {
         about_title
-        about_description        
+        about_description
         banner_msg
         banner_name
         banner_desc
@@ -83,10 +86,10 @@ export const query = graphql`
         menuabout
         menuservices
         menujobs
-        menucontact        
+        menucontact
       }
     }
-    allCosmicjsButtons(filter: {locale: {eq: $locale}}) {
+    allCosmicjsButtons(filter: { locale: { eq: $locale } }) {
       edges {
         node {
           metadata {
@@ -98,7 +101,10 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsServices(filter: {locale: {eq: $locale}},sort: {fields: metadata___order}) {
+    allCosmicjsServices(
+      filter: { locale: { eq: $locale } }
+      sort: { fields: metadata___order }
+    ) {
       edges {
         node {
           title
@@ -111,7 +117,10 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsJobs(filter: {locale: {eq: $locale}},sort: {fields: metadata___orderindex}) {
+    allCosmicjsJobs(
+      filter: { locale: { eq: $locale } }
+      sort: { fields: metadata___orderindex }
+    ) {
       edges {
         node {
           title
@@ -127,7 +136,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsProjects(filter: {locale: {eq: $locale}}) {
+    allCosmicjsProjects(filter: { locale: { eq: $locale } }) {
       edges {
         node {
           title
