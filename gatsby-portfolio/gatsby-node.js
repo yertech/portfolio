@@ -1,39 +1,19 @@
-const each = require('lodash/each')
-const find = require('lodash/find')
-const path = require('path')
+const each = require("lodash/each")
+const find = require("lodash/find")
+const path = require("path")
 
-exports.createPages = ({
-graphql,
-actions
-}) => {
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-const {
-    createPage
-} = actions
-
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /wowjs/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
-}
   return new Promise((resolve, reject) => {
-    const pageTemplate = path.resolve('./src/template/page.js')
+    const pageTemplate = path.resolve("./src/template/page.js")
     resolve(
       graphql(
         `
           {
-            allCosmicjsPages{
-              edges{
-                node{
+            allCosmicjsPages {
+              edges {
+                node {
                   id
                   slug
                   locale
@@ -48,19 +28,22 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           reject(result.errors)
         }
 
-        const pages = result.data.allCosmicjsPages.edges;
+        const pages = result.data.allCosmicjsPages.edges
 
         each(pages, page => {
           page = page.node
-        //   $slugLocale = page.locale === 'en-US' ? '' : `/${page.locale}`
-          $slugLocale = page.locale === 'en-US' ? '' : `/fr`
-          $slug = page.slug === 'home' ? `${$slugLocale}/` : `${$slugLocale}/${page.slug}`
+          //   $slugLocale = page.locale === 'en-US' ? '' : `/${page.locale}`
+          $slugLocale = page.locale === "en-US" ? "" : `/fr`
+          $slug =
+            page.slug === "home"
+              ? `${$slugLocale}/`
+              : `${$slugLocale}/${page.slug}`
           createPage({
             path: $slug,
             component: pageTemplate,
             context: {
               pageId: page.id,
-              locale: page.locale
+              locale: page.locale,
             },
           })
         })
