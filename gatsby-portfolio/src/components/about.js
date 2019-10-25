@@ -6,7 +6,7 @@ const About = ({ btnData, aboutPageData }) => {
   return (
     <section
       className="about-area section-gap-top section-gap-bottom-90"
-      id="about-area"
+      id="about"
     >
       <div className="container">
         <div className="row align-items-center justify-content-between">

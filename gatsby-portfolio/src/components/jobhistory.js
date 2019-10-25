@@ -6,7 +6,7 @@ const JobHistory = ({ jobsPageData, jobsData }) => {
   return (
     <section
       className="job-area section-gap-top section-gap-top section-gap-bottom-90"
-      id="job-area"
+      id="jobs"
     >
       <div className="container">
         <div className="row d-flex">

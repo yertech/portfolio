@@ -24,12 +24,12 @@ class PageTemplate extends React.Component {
   }
 
   componentDidMount() {
+    //new WOW().init()
+    window.addEventListener("scroll", this.listenScrollEvent)
     if (typeof window !== "undefined") {
       // eslint-disable-next-line global-require
       require("smooth-scroll")('a[href*="#"]')
     }
-    //new WOW().init()
-    window.addEventListener("scroll", this.listenScrollEvent)
   }
 
   componentWillUnmount() {
@@ -42,11 +42,12 @@ class PageTemplate extends React.Component {
     const serviceData = this.props.data.allCosmicjsServices.edges
     const jobsData = this.props.data.allCosmicjsJobs.edges
     const projectData = this.props.data.allCosmicjsProjects.edges
+    const menuData = this.props.data.allCosmicjsMenus.edges
     const localeLight = this.props.pageContext.locale === "en-US" ? "en" : "fr"
 
     return (
       <Layout
-        headerPageData={pageData}
+        menuData={menuData}
         locale={localeLight}
         isHeaderFixed={this.state.isHeaderFixed}
       >
@@ -97,6 +98,19 @@ export const query = graphql`
             downloadresume_title
             hireme
             hireme_title
+          }
+        }
+      }
+    }
+    allCosmicjsMenus(
+      filter: { locale: { eq: $locale } }
+      sort: { fields: metadata___order_index }
+    ) {
+      edges {
+        node {
+          metadata {
+            title
+            hash
           }
         }
       }

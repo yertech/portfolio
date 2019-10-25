@@ -13,7 +13,7 @@ const Services = ({ servicesPageData, serviceData }) => {
   return (
     <section
       className="service-area section-gap-top section-gap-bottom-90"
-      id="service-area"
+      id="skills"
     >
       <div className="container">
         <div className="row">

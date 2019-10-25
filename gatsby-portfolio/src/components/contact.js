@@ -7,7 +7,7 @@ class Contact extends React.Component {
     return (
       <section
         className="contact-area section-gap-top section-gap-bottom-90"
-        id="contact-area"
+        id="contact"
       >
         <div className="container">
           <div className="row">

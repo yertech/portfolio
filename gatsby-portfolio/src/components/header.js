@@ -1,36 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import DrawerToggleButton from "../components/SideDrawer/DrawerToggleButton"
-import { useStaticQuery, graphql } from "gatsby"
 import SideDrawer from "../components/SideDrawer/SideDrawer"
-import { Link } from "gatsby"
+import NavMenu from "../components/NavMenu"
 
 const Header = ({
   locale,
-  headerPageData,
+  menuData,
   isHeaderFixed,
   drawerToggleClickHandler,
-  backdropClickHandler,
+  menuItemClickHandler,
   sideDrawerOpen,
+  activeHash,
 }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          languages {
-            slug
-            localized_name {
-              en
-              fr
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const { menuhome, menuabout, menuservices, menujobs, menucontact } =
-    headerPageData || {}
   return (
     <>
       <header id="header" className={isHeaderFixed ? "header-scrolled" : ""}>
@@ -41,52 +23,24 @@ const Header = ({
                 <img src="/img/logo.png" alt="" title="" />
               </a>
             </div>
-            <nav className="nav-menu-container">
-              <ul className="nav-menu">
-                <li>
-                  <a className="active" href="#">
-                    {menuhome}
-                  </a>
-                </li>
-                <li>
-                  <a href="#about-area">{menuabout}</a>
-                </li>
-                <li>
-                  <a href="#service-area">{menuservices}</a>
-                </li>
-                <li>
-                  <a href="#job-area">{menujobs}</a>
-                </li>
-                <li>
-                  <a href="#contact-area">{menucontact}</a>
-                </li>
-                <li>
-                  {data.site.siteMetadata.languages.map(lang => {
-                    return (
-                      <Link
-                        key={lang.slug}
-                        className="linkFlag"
-                        to={`/${lang.slug}`}
-                      >
-                        <img
-                          src={"/img/" + lang.localized_name[locale] + ".png"}
-                        ></img>
-                      </Link>
-                    )
-                  })}
-                </li>
-              </ul>
-            </nav>
+            <NavMenu
+              menuData={menuData}
+              locale={locale}
+              navClass={"nav-menu-container"}
+              menuItemClickHandler={menuItemClickHandler}
+              activeHash={activeHash}
+              sideDrawerOpen={sideDrawerOpen}
+            />
           </div>
         </div>
         <DrawerToggleButton click={drawerToggleClickHandler} />
       </header>
       <SideDrawer
-        show={sideDrawerOpen}
+        sideDrawerOpen={sideDrawerOpen}
         locale={locale}
-        headerPageData={headerPageData}
-        backdropClickHandler={backdropClickHandler}
-        languages={data.site.siteMetadata.languages}
+        menuItemClickHandler={menuItemClickHandler}
+        menuData={menuData}
+        activeHash={activeHash}
       />
     </>
   )
@@ -94,7 +48,6 @@ const Header = ({
 
 Header.propTypes = {
   locale: PropTypes.string.isRequired,
-  headerPageData: PropTypes.object.isRequired,
   isHeaderFixed: PropTypes.bool.isRequired,
 }
 

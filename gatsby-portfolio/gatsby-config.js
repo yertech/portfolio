@@ -45,7 +45,14 @@ module.exports = {
       resolve: `gatsby-source-cosmicjs`,
       options: {
         bucketSlug: "yertech-portfolio",
-        objectTypes: ["buttons", "pages", "services", "projects", "jobs"],
+        objectTypes: [
+          "buttons",
+          "pages",
+          "services",
+          "projects",
+          "jobs",
+          "menus",
+        ],
         apiAccess: {
           read_key: "advOoDk1wXfKCinwZavr0ql3nO3IQhHK91NPccnqqv4gNOSWV2",
         },

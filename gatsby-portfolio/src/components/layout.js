@@ -9,6 +9,7 @@ import Backdrop from "../components/Backdrop/Backdrop"
 class Layout extends React.Component {
   state = {
     sideDrawerOpen: false,
+    activeHash: "home",
   }
 
   drawerToggleClickHandler = () => {
@@ -17,9 +18,16 @@ class Layout extends React.Component {
     })
   }
 
-  backdropClickHandler = hash => {
+  menuItemClickHandler = (hash, sideDrawerOpen) => {
+    if (sideDrawerOpen === true) {
+      this.setState({ sideDrawerOpen: false })
+    }
+    window.location.hash = hash === "home" ? "#" : `#${hash}`
+    this.setState({ activeHash: hash })
+  }
+
+  backdropClickHandler = () => {
     this.setState({ sideDrawerOpen: false })
-    window.location.hash = hash
   }
 
   render() {
@@ -32,11 +40,12 @@ class Layout extends React.Component {
       <>
         <Header
           locale={this.props.locale}
-          headerPageData={this.props.headerPageData}
           isHeaderFixed={this.props.isHeaderFixed}
           drawerToggleClickHandler={this.drawerToggleClickHandler}
           sideDrawerOpen={this.state.sideDrawerOpen}
-          backdropClickHandler={this.backdropClickHandler}
+          menuItemClickHandler={this.menuItemClickHandler}
+          menuData={this.props.menuData}
+          activeHash={this.state.activeHash}
         />
         {backdrop}
         {this.props.children}
@@ -57,7 +66,6 @@ class Layout extends React.Component {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   locale: PropTypes.string.isRequired,
-  headerPageData: PropTypes.object.isRequired,
 }
 
 export default Layout

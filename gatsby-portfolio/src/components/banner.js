@@ -5,7 +5,7 @@ import { useSpring, animated, config } from "react-spring"
 
 const Banner = ({ btnData, bannerPageData }) => {
   const contentProps = useSpring({
-    from: { opacity: 0, marginTop: 300 },
+    from: { opacity: 0, marginTop: 200 },
     opacity: 1,
     marginTop: 0,
     config: config.molasses,
