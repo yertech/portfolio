@@ -13,7 +13,7 @@ const Banner = ({ btnData, bannerPageData }) => {
 
   // <!-- start banner Area -->
   return (
-    <section className="home-banner-area">
+    <section className="home-banner-area" id="home">
       <div className="container">
         <div className="row fullscreen d-flex align-items-center">
           <div className="banner-content col-lg-6 col-md-12 justify-content-center ">

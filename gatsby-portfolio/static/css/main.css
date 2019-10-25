@@ -978,7 +978,7 @@ th {
 
 @media (max-width: 1024px) {
     .section-gap-top {
-        padding: 60px 0;
+        padding: 150px 0;
     }
 }
 
@@ -2665,6 +2665,7 @@ h6 {
     text-transform: capitalize;
     outline: none;
     font-family: "Poppins", sans-serif;
+    cursor: pointer;
 }
 
 .nav-menu a.active,

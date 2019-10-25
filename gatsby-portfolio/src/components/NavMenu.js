@@ -17,14 +17,13 @@ const NavMenu = ({
       <nav className={navClass}>
         <ul className="nav-menu">
           {menuData.map(menu => {
+            const toHash =
+              menu.node.metadata.hash === "home"
+                ? "#"
+                : `#${menu.node.metadata.hash}`
             return (
               <li key={menu.node.metadata.title}>
-                <Link
-                  to={
-                    menu.node.metadata.hash === "home"
-                      ? "#"
-                      : `#${menu.node.metadata.hash}`
-                  }
+                <a
                   className={
                     menu.node.metadata.hash === activeHash ? "active" : ""
                   }
@@ -36,7 +35,7 @@ const NavMenu = ({
                   }
                 >
                   {menu.node.metadata.title}
-                </Link>
+                </a>
               </li>
             )
           })}

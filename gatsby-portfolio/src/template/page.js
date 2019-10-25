@@ -26,10 +26,6 @@ class PageTemplate extends React.Component {
   componentDidMount() {
     //new WOW().init()
     window.addEventListener("scroll", this.listenScrollEvent)
-    if (typeof window !== "undefined") {
-      // eslint-disable-next-line global-require
-      require("smooth-scroll")('a[href*="#"]')
-    }
   }
 
   componentWillUnmount() {

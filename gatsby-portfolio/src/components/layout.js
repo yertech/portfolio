@@ -19,10 +19,13 @@ class Layout extends React.Component {
   }
 
   menuItemClickHandler = (hash, sideDrawerOpen) => {
+    document.querySelector(`#${hash}`).scrollIntoView({
+      behavior: "smooth",
+    })
+
     if (sideDrawerOpen === true) {
       this.setState({ sideDrawerOpen: false })
     }
-    window.location.hash = hash === "home" ? "#" : `#${hash}`
     this.setState({ activeHash: hash })
   }
 
