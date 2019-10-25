@@ -12,7 +12,7 @@ const NavMenu = ({
   sideDrawerOpen,
 }) => {
   const { languages } = useSiteMetadata()
-  menuData = []
+  menuData = menuData || []
   return (
     <>
       <nav className={navClass}>
