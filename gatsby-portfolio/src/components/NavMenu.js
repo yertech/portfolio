@@ -35,7 +35,6 @@ const NavMenu = ({
                     )
                   }
                 >
-                  {" "}
                   {menu.node.metadata.title}
                 </Link>
               </li>
