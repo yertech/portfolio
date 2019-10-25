@@ -3,8 +3,8 @@ require("dotenv").config()
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Yertech`,
+    description: `Yertech Fullstack developer`,
     author: `@gatsbyjs`,
     languages: [
       { slug: "", localized_name: { en: "en", fr: "en" } },
