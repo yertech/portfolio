@@ -6,7 +6,7 @@ import NavMenu from "../components/NavMenu"
 
 const Header = ({
   locale,
-  menuData,
+  menuData = [],
   isHeaderFixed,
   drawerToggleClickHandler,
   menuItemClickHandler,

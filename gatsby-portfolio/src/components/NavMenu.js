@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { useSiteMetadata } from "../components/hooks/use-site-metadata"
 
 const NavMenu = ({
-  menuData,
+  menuData = [],
   locale,
   navClass,
   menuItemClickHandler,
@@ -12,7 +12,6 @@ const NavMenu = ({
   sideDrawerOpen,
 }) => {
   const { languages } = useSiteMetadata()
-  menuData = menuData || []
   return (
     <>
       <nav className={navClass}>
