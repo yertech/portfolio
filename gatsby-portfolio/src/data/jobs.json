@@ -1,0 +1,132 @@
+[
+    {
+        "locale": "fr-FR",
+        "title": "veepee entertainment FR",
+        "metadata": {
+            "title": "CTO Entertainment<br/>Fullstack C#/ASP.NET<br/> Developer",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Mar'15 à Avr'19",
+            "description": "<p>Superviser et g&eacute;rer l&#39;ensemble de l&#39;activit&eacute; technique au sein de la filiale Entertainment VEEPEE (ancienne vente-privee.com). D&eacute;veloppement de deux plateformes compl&egrave;tes de ticketing : Front Office, Back Office, Web Services, Mobile et Tablet. &nbsp;</p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>Stack:</strong></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>API .NET, API .NET Core,React.JS, SQL Server stored procedures, DB management, and optimizations, Elastic search, Redis, Signal Air, Nginx, Varnish, Kibana, Grafana Visual Studio, VS Code, Resharper, Git, GITLAB (+CI), Slack, SCRUM, Kanban</strong></span></p>",
+            "dateshtml": "<span>M</span><span>a</span><span>r</span><span>'</span><span>1</span><span>5&nbsp;</span><span>à&nbsp;</span><span>A</span><span>v</span><span>r</span><span>'</span><span>1</span><span>9</span>",
+            "orderindex": 1
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "title": "IT Manager FR",
+        "metadata": {
+            "title": "IT Manager<br/>Fullstack C#/ASP.NET<br/> Developer",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Sep'12 à Mar'15",
+            "description": "<p>Gestion technique de projet en mode agile (scrum master), des ressources et des moyens techniques. D&eacute;veloppement multiple de projets e-commerce autour du ticketing.</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">TDD (Test Driven Development) and BDD (Behavior Driven Development)<br>C # 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</span></strong></p>",
+            "dateshtml": "<span>S</span><span>e</span><span>p</span><span>'</span><span>1</span><span>2&nbsp;</span><span>à&nbsp;</span><span>M</span><span>a</span><span>r</span><span>'</span><span>1</span><span>5</span>",
+            "orderindex": 2
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "title": "Lead developer FR",
+        "metadata": {
+            "title": "Senior lead developer<br/>Fullstack C#/ASP.NET",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Jan'11 à Sep'12",
+            "description": "<p>D&eacute;veloppement from scratch de la premi&egrave;re plate-forme de billetterie pour vente-privee.com. Back office reli&eacute; &agrave; des api partenaires, Front office sur Azure (site web, middle office, DB, service bus), mode Agile (scrum master), Gestion des ressources et moyens techniques. Optimisation des performances + Tests de charge</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">C # 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</span></strong></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>1</span><span>1&nbsp;</span><span>à&nbsp;</span><span>S</span><span>e</span><span>p</span><span>'</span><span>1</span><span>2</span>",
+            "orderindex": 3
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "title": "Senior devFR",
+        "metadata": {
+            "title": "Senior développeur<br/>Fullstack C#/ASP.NET",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Jan'07 à Jan'11",
+            "description": "<p>D&eacute;veloppement e-commerce front et back, refactoring, nouveaux projets, debug, revues de code, d&eacute;veloppement SQL (proc&eacute;dures stock&eacute;es + &eacute;volution du mod&egrave;le de donn&eacute;es),m&eacute;thodologies Agile comme scrum<br><br>Principaux projets : Lancement du site italien, Gestion et optimisation des abonnements e-mail, Refonte dynamique de l&#39;espace de vente, API services Iphone, etc...</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack: </span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">C# ASP.NET, SQL development, Neolane</span></strong></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>7&nbsp;</span><span>à&nbsp;</span><span>J</span><span>a</span><span>n</span><span>'</span><span>1</span><span>1</span>",
+            "orderindex": 4
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "title": "C# .Net Developer FR",
+        "metadata": {
+            "title": "C# .Net Developer",
+            "subtitle": "SOGETI",
+            "location": "Paris",
+            "dates": "Jan'05 à Jan'07",
+            "description": "<p>Projets pour le site fa&ccedil;ade du Cr&eacute;dit Lyonnais</p><p><span style=\"color: rgb(0, 0, 0);\"><strong>Stack:</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong>.NET 1.1 and 2.0 host, C #, Oracle, Ajax Libraries, ASP.NET</strong></span></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>5&nbsp;</span><span>à&nbsp;</span><span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>7</span>",
+            "orderindex": 5
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "1 - veepee entertainment Mar'15 to Apr'19",
+        "metadata": {
+            "title": "CTO Entertainment<br/>Fullstack C#/ASP.NET<br/> Developer",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Mar'15 to Apr'19",
+            "description": "<p style=\"text-align: justify;\">Supervise and manage all technical activity within the VEEPEE (old vente-privee.com) Entertainment subsidiary. Development of two complete ticketing platforms: Front Office, Back Office, Web Services, Mobile and Tablet</p><p style=\"text-align: justify;\"><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p style=\"text-align: justify;\"><strong><span style=\"color: rgb(0, 0, 0);\">API .NET, API .NET Core,React.JS, SQL Server stored procedures, DB management, and optimizations, Elastic search, Redis, Signal Air, Nginx, Varnish, Kibana, Grafana Visual Studio, VS Code, Resharper, Git, GITLAB (+CI), Slack, SCRUM, Kanban</span></strong></p>",
+            "dateshtml": "<span>M</span><span>a</span><span>r</span><span>'</span><span>1</span><span>5&nbsp;</span><span>t</span><span>o&nbsp;</span><span>A</span><span>p</span><span>r</span><span>'</span><span>1</span><span>9</span>",
+            "orderindex": 1
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "2 - IT Manager - Sep'12 to Mar'15",
+        "metadata": {
+            "title": "IT Manager<br/>Fullstack C#/ASP.NET<br/> Developer",
+            "subtitle": " Veepee",
+            "location": "Paris",
+            "dates": "Sep'12 to Mar'15",
+            "description": "<p>Technical project management in agile mode (scrum master). Manage resources and technical means. Multiple developments of e-commerce projects around ticketing.</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack: </span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><strong>TDD (Test Driven Development) and BDD (Behavior Driven Development)<br>C # 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</strong></span></p>",
+            "dateshtml": "<span>S</span><span>e</span><span>p</span><span>'</span><span>1</span><span>2&nbsp;</span><span>t</span><span>o&nbsp;</span><span>M</span><span>a</span><span>r</span><span>'</span><span>1</span><span>5</span>",
+            "orderindex": 2
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "3 - Lead developer - Jan'11 to Sep'12",
+        "metadata": {
+            "title": "Senior lead developer<br/>Fullstack C#/ASP.NET",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Jan'11 to Sep'12",
+            "description": "<p>Developing from scratch of the first ticketing platform for <a href=\"//veepee.com\" rel=\"noopener noreferrer\" target=\"_blank\">vente-privee.com</a>. Back office with external web services communications, Front office in <strong><span style=\"color: rgb(0, 0, 0);\">Azure</span></strong><span style=\"color: rgb(0, 0, 0);\">&nbsp;</span>(website, middle office, DB, service bus), Agile mode (scrum master), Manage resources and technical means. Optimization of performances + Load tests</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">C # 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</span></strong></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>1</span><span>1&nbsp;</span><span>t</span><span>o&nbsp;</span><span>S</span><span>e</span><span>p</span><span>'</span><span>1</span><span>2</span>",
+            "orderindex": 3
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "4 - Senior dev - Jan'07 to Jan'11",
+        "metadata": {
+            "title": "Senior developer<br/>Fullstack C#/ASP.NET",
+            "subtitle": "Veepee",
+            "location": "Paris",
+            "dates": "Jan'07 to Jan'11",
+            "description": "<p>Development front and back e-commerce, refactoring, new projects, debugging, code reviews, SQL development (stored procedure) + Data model evolution, scrum</p><p>Main projects: Launch of Italian site, Management and optimization of email subscriptions, Dynamic redesign of the sales area, Iphone Web services, etc</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack: </span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">C# ASP.NET, SQL development, Neolane</span></strong></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>7&nbsp;</span><span>t</span><span>o&nbsp;</span><span>J</span><span>a</span><span>n</span><span>'</span><span>1</span><span>1</span>",
+            "orderindex": 4
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "5 - C# .Net Developer - Jan'05 to Jan'07",
+        "metadata": {
+            "title": "C# .Net Developer",
+            "subtitle": "SOGETI",
+            "location": "Paris",
+            "dates": "Jan'05 to Jan'07",
+            "description": "<p>Projects for the Credit Lyonnais bank</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><strong>.NET 1.1 and 2.0 host, C #, Oracle, Ajax Libraries, ASP.NET</strong></span></p>",
+            "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>5&nbsp;</span><span>t</span><span>o&nbsp;</span><span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>7</span>",
+            "orderindex": 5
+        }
+    }
+]

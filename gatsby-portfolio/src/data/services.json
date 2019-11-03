@@ -1,0 +1,82 @@
+[
+  {
+    "locale": "en-US",
+    "title": "back end",
+    "metadata": {
+      "class_name": "lnr lnr-code",
+      "title": "<h4><span>Back End</span> Development</h4>",
+      "description": "<p>.NET C#</p><p>.NET Core C#</p><p>REST API</p><p>Entity Framework</p><p>T-SQL</p><p>Windows Forms</p>",
+      "order": 1
+    }
+  },
+  {
+    "locale": "en-US",
+    "title": "front-end",
+    "metadata": {
+      "class_name": "lnr lnr-laptop-phone",
+      "title": "<h4><span>Front End</span> Development</h4>",
+      "description": "<p>ASP.NET MVC / .NET CORE</p><p>HTML5/CSS3</p><p>JAVASCRIPT</p><p>REACT.JS</p><p>GATSBY.JS</p><p>GraphQL</p>",
+      "order": 2
+    }
+  },
+  {
+    "locale": "en-US",
+    "title": "database",
+    "metadata": {
+      "class_name": "lnr lnr-database",
+      "title": "<h4><span>Database &amp; NoSQL</span></h4>",
+      "description": "<p>T-SQL</p><p>SQL Server</p><p>Azure Database</p><p>ElasticSearch</p><p>Firebase</p><p>Redis</p>",
+      "order": 3
+    }
+  },
+  {
+    "locale": "en-US",
+    "title": "ecommerce",
+    "metadata": {
+      "class_name": "lnr lnr-store",
+      "title": "<h4><span>E-Commerce</span> CMS &amp; Tools</h4>",
+      "description": "<p>Shopify</p><p>WordPress</p><p>Netlify</p><p>Cosmic.js</p><p>Git (Bitbucket, Gitlab, Github)</p><p>TFS</p>",
+      "order": 4
+    }
+  },
+  {
+    "locale": "fr-FR",
+    "title": "back end FR",
+    "metadata": {
+      "class_name": "lnr lnr-code",
+      "title": "<h4><span>Back End</span> Development</h4>",
+      "description": "<p>.NET C#</p><p>.NET Core C#</p><p>REST API</p><p>Entity Framework</p><p>T-SQL</p><p>Windows Forms</p>",
+      "order": 1
+    }
+  },
+  {
+    "locale": "fr-FR",
+    "title": "front-end FR",
+    "metadata": {
+      "class_name": "lnr lnr-laptop-phone",
+      "title": "<h4><span>Front End</span> Development</h4>",
+      "description": "<p>ASP.NET MVC / .NET CORE</p><p>HTML5/CSS3</p><p>JAVASCRIPT</p><p>REACT.JS</p><p>GATSBY.JS</p><p>GraphQL</p>",
+      "order": 2
+    }
+  },
+  {
+    "locale": "fr-FR",
+    "title": "database",
+    "metadata": {
+      "class_name": "lnr lnr-database",
+      "title": "<h4><span>Base de donn&eacute;es &amp; NoSQL</span></h4>",
+      "description": "<p>T-SQL</p><p>SQL Server</p><p>Azure Database</p><p>ElasticSearch</p><p>Firebase</p><p>Redis</p>",
+      "order": 3
+    }
+  },
+  {
+    "locale": "fr-FR",
+    "title": "ecommerce FR",
+    "metadata": {
+      "class_name": "lnr lnr-store",
+      "title": "<h4><span>E-Commerce</span> CMS &amp; Outils</h4>",
+      "description": "<p>Shopify</p><p>Wordpress</p><p>Netlify</p><p>Cosmic.js</p><p>Git (Bitbucket, Gitlab, Github)</p><p>TFS</p>",
+      "order": 4
+    }
+  }
+]

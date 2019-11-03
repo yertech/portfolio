@@ -41,21 +41,28 @@ module.exports = {
         javascriptEnabled: true,
       },
     },
+    // {
+    //   resolve: `gatsby-source-cosmicjs`,
+    //   options: {
+    //     bucketSlug: "yertech-portfolio",
+    //     objectTypes: [
+    //       "buttons",
+    //       "pages",
+    //       "services",
+    //       "projects",
+    //       "jobs",
+    //       "menus",
+    //     ],
+    //     apiAccess: {
+    //       read_key: "advOoDk1wXfKCinwZavr0ql3nO3IQhHK91NPccnqqv4gNOSWV2",
+    //     },
+    //   },
+    // },
+    `gatsby-transformer-json`,
     {
-      resolve: `gatsby-source-cosmicjs`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        bucketSlug: "yertech-portfolio",
-        objectTypes: [
-          "buttons",
-          "pages",
-          "services",
-          "projects",
-          "jobs",
-          "menus",
-        ],
-        apiAccess: {
-          read_key: "advOoDk1wXfKCinwZavr0ql3nO3IQhHK91NPccnqqv4gNOSWV2",
-        },
+        path: `./src/data/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

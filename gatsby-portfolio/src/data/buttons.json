@@ -1,0 +1,20 @@
+[
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "downloadresumehtml": "<span>T</span><span>é</span><span>l</span><span>é</span><span>c</span><span>h</span><span>a</span><span>r</span><span>g</span><span>e</span><span>z</span><span>&nbsp;</span><span>C</span><span>V</span>",
+            "downloadresume_title": "Téléchargez CV",
+            "hireme": "<span>R</span><span>e</span><span>c</span><span>r</span><span>u</span><span>t</span><span>e</span><span>z</span><span>-</span><span>m</span><span>o</span><span>i</span>",
+            "hireme_title": "Recrutez-moi"
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "downloadresumehtml": "<span>D</span><span>o</span><span>w</span><span>n</span><span>l</span><span>o</span><span>a</span><span>d</span><span>&nbsp;</span><span>R</span><span>e</span><span>s</span><span>u</span><span>m</span><span>e</span>",
+            "downloadresume_title": "Download Resume",
+            "hireme": "<span>H</span><span>i</span><span>r</span><span>e</span><span>&nbsp;</span><span>M</span><span>e</span>",
+            "hireme_title": "Hire Me"
+        }
+    }
+]

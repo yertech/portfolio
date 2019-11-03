@@ -11,10 +11,9 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allCosmicjsPages {
+            allPagesJson {
               edges {
                 node {
-                  id
                   slug
                   locale
                 }
@@ -28,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const pages = result.data.allCosmicjsPages.edges
+        const pages = result.data.allPagesJson.edges
 
         each(pages, page => {
           page = page.node
@@ -42,7 +41,6 @@ exports.createPages = ({ graphql, actions }) => {
             path: $slug,
             component: pageTemplate,
             context: {
-              pageId: page.id,
               locale: page.locale,
             },
           })

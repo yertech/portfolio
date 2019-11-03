@@ -33,12 +33,11 @@ class PageTemplate extends React.Component {
   }
 
   render() {
-    const btnData = this.props.data.allCosmicjsButtons.edges[0].node.metadata
-    const pageData = this.props.data.cosmicjsPages.metadata
-    const serviceData = this.props.data.allCosmicjsServices.edges
-    const jobsData = this.props.data.allCosmicjsJobs.edges
-    const projectData = this.props.data.allCosmicjsProjects.edges
-    const menuData = this.props.data.allCosmicjsMenus.edges
+    const btnData = this.props.data.allButtonsJson.edges[0].node.metadata
+    const pageData = this.props.data.pagesJson.metadata
+    const serviceData = this.props.data.allServicesJson.edges
+    const jobsData = this.props.data.allJobsJson.edges
+    const menuData = this.props.data.allMenusJson.edges
     const localeLight = this.props.pageContext.locale === "en-US" ? "en" : "fr"
 
     return (
@@ -63,8 +62,8 @@ PageTemplate.propTypes = {
 }
 
 export const query = graphql`
-  query Index($pageId: String!, $locale: String!) {
-    cosmicjsPages(id: { eq: $pageId }) {
+  query Index($locale: String!) {
+    pagesJson(locale: { eq: $locale }) {
       metadata {
         about_title
         about_description
@@ -86,7 +85,7 @@ export const query = graphql`
         menucontact
       }
     }
-    allCosmicjsButtons(filter: { locale: { eq: $locale } }) {
+    allButtonsJson(filter: { locale: { eq: $locale } }) {
       edges {
         node {
           metadata {
@@ -98,7 +97,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsMenus(
+    allMenusJson(
       filter: { locale: { eq: $locale } }
       sort: { fields: metadata___order_index }
     ) {
@@ -111,7 +110,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsServices(
+    allServicesJson(
       filter: { locale: { eq: $locale } }
       sort: { fields: metadata___order }
     ) {
@@ -127,7 +126,7 @@ export const query = graphql`
         }
       }
     }
-    allCosmicjsJobs(
+    allJobsJson(
       filter: { locale: { eq: $locale } }
       sort: { fields: metadata___orderindex }
     ) {
@@ -142,22 +141,6 @@ export const query = graphql`
             description
             dateshtml
             orderindex
-          }
-        }
-      }
-    }
-    allCosmicjsProjects(filter: { locale: { eq: $locale } }) {
-      edges {
-        node {
-          title
-          metadata {
-            date
-            image {
-              url
-            }
-            gallery
-            summary
-            description
           }
         }
       }

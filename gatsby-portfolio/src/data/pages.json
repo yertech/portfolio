@@ -1,0 +1,50 @@
+[
+    {
+        "locale": "en-US",
+        "slug": "home",
+        "metadata": {
+            "about_title": "About Myself",
+            "about_description": "<p>Development engineer and passionate about new technologies. Over 12 years of professional experience in back-end, front-end, management, including for Europe&#39;s leading e-commerce company Veepee, I have demonstrated my ability to manage and complete projects with rigor, proactivity and investment at high-quality levels. I also held a CTO position for several years managing a team of developers in agile methods (SCRUM, KANBAN).</p>",
+            "banner_msg": "It's me!",
+            "banner_name": "Fabrice Trey",
+            "banner_desc": "Senior Fullstack <span class=\"designer\">Developer</span> and expert <span class=\"designer\">C#/ASP.NET</span>",
+            "service_title": "Skills",
+            "service_description": "",
+            "job_title": "Job History",
+            "job_description": "",
+            "contact_title": "Contact Me",
+            "contact_description": "",
+            "contact_number": "+6287846143652",
+            "contact_email": "ftrey@yertech.org",
+            "menuhome": "Home",
+            "menuabout": "About",
+            "menuservices": "Skills",
+            "menujobs": "Jobs",
+            "menucontact": "Contact"
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "slug": "home",
+        "metadata": {
+            "about_title": "A propos",
+            "about_description": "<p>Ing&eacute;nieur en d&eacute;veloppement et passionn&eacute; de nouvelles technologies. Plus de 12ans d&#39;exp&eacute;riences professionnelles dans le back-end, front-end, management, notamment pour le leader du commerce &eacute;lectronique en Europe Veepee . Durant ces ann&eacute;es, j&#39;ai d&eacute;montr&eacute; ma capacit&eacute; &agrave; g&eacute;rer et &agrave; mener &agrave; bien des projets avec rigueur, pro-activit&eacute; et investissement\n&agrave; des niveaux de qualit&eacute;s &eacute;lev&eacute;s. J&#39;ai aussi occup&eacute;\nun poste de CTO pendant plusieurs ann&eacute;es en manageant une &eacute;quipe de d&eacute;veloppeurs en m&eacute;thodes agiles (SCRUM, KANBAN).</p>",
+            "banner_msg": "C'est moi!",
+            "banner_name": "Fabrice Trey",
+            "banner_desc": "Senior Fullstack <span class=\"designer\">Développeur</span> et expert <span class=\"designer\">C#/ASP.NET</span>",
+            "service_title": "Skills",
+            "service_description": "",
+            "job_title": "Expériences professionnelles",
+            "job_description": "",
+            "contact_title": "Contactez-moi",
+            "contact_description": "",
+            "contact_number": "+6287846143652",
+            "contact_email": "ftrey@yertech.org",
+            "menuhome": "Accueil",
+            "menuabout": "A propos",
+            "menuservices": "Skills",
+            "menujobs": "Emplois",
+            "menucontact": "Contact"
+        }
+    }
+]

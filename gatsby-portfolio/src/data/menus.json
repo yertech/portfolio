@@ -1,0 +1,82 @@
+[
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "title": "Accueil",
+            "hash": "home",
+            "order_index": 1
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "title": "A propos",
+            "hash": "about",
+            "order_index": 2
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "title": "Emplois",
+            "hash": "jobs",
+            "order_index": 4
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "title": "Skills",
+            "hash": "skills",
+            "order_index": 3
+        }
+    },
+    {
+        "locale": "fr-FR",
+        "metadata": {
+            "title": "Contact",
+            "hash": "contact",
+            "order_index": 5
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "title": "Home",
+            "hash": "home",
+            "order_index": 1
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "title": "About",
+            "hash": "about",
+            "order_index": 2
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "title": "Jobs",
+            "hash": "jobs",
+            "order_index": 4
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "title": "Skills",
+            "hash": "skills",
+            "order_index": 3
+        }
+    },
+    {
+        "locale": "en-US",
+        "metadata": {
+            "title": "Contact",
+            "hash": "contact",
+            "order_index": 5
+        }
+    }
+]
