@@ -46,7 +46,7 @@ class PageTemplate extends React.Component {
         locale={localeLight}
         isHeaderFixed={this.state.isHeaderFixed}
       >
-        <SEO title="Home" keywords={[`cosmicjs`, `application`, `react`]} />
+        <SEO title="Fabrice Trey | Developer Fullstack Freelance (.NET, React.js, Gatsby.js)" keywords={[`cosmicjs`, `Developer Fullstack`, `react`, `Freelancer`, `Gatsby.js`, `React.js`, `.NET`, `.NET Core`]} />
         <Banner btnData={btnData} bannerPageData={pageData} />
         <About btnData={btnData} aboutPageData={pageData} />
         <Services servicesPageData={pageData} serviceData={serviceData} />

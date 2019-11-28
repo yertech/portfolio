@@ -1,6 +1,19 @@
 [
     {
         "locale": "fr-FR",
+        "title": "Fullstack Developer Freelance",
+        "metadata": {
+            "title": "Freelancer<br/>Fullstack Developer",
+            "subtitle": "Yertech",
+            "location": "Remote",
+            "dates": "Avr'19 à Auj.",
+            "description": "<p>D&eacute;veloppement back-end et front-end full remote<br/> Consulting<br/> Refactoring<br/> Debugging<br/></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>Stack:</strong></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>API .NET, API .NET Core,React.JS, Gatsby.js, SQL Server stored procedures, Entity Framework Core, DB management and optimizations, Elastic search, Redis, Signal Air, Nginx, Varnish, Kibana, Grafana Visual Studio, VS Code, Resharper, Git, GITLAB (+CI), Slack, SCRUM, Kanban</strong></span></p>",
+            "dateshtml": "<span>A</span><span>v</span><span>r</span><span>'</span><span>1</span><span>9&nbsp;</span><span>à&nbsp;</span><span>A</span><span>u</span><span>j</span><span>.</span>",
+            "orderindex": 0
+        }
+    },
+    {
+        "locale": "fr-FR",
         "title": "veepee entertainment FR",
         "metadata": {
             "title": "CTO Entertainment<br/>Fullstack C#/ASP.NET<br/> Developer",
@@ -20,7 +33,7 @@
             "subtitle": "Veepee",
             "location": "Paris",
             "dates": "Sep'12 à Mar'15",
-            "description": "<p>Gestion technique de projet en mode agile (scrum master), des ressources et des moyens techniques. D&eacute;veloppement multiple de projets e-commerce autour du ticketing.</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">TDD (Test Driven Development) and BDD (Behavior Driven Development)<br>C # 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</span></strong></p>",
+            "description": "<p>Gestion technique de projet en mode agile (scrum master), des ressources et des moyens techniques. D&eacute;veloppement multiple de projets e-commerce autour du ticketing.</p><p><strong><span style=\"color: rgb(0, 0, 0);\">Stack:&nbsp;</span></strong></p><p><strong><span style=\"color: rgb(0, 0, 0);\">TDD (Test Driven Development) and BDD (Behavior Driven Development), C# 4.0 ASP.NET, ASP.NET MVC3 and Azure (FrontEnd + BackEnd ), SQL SERVER</span></strong></p>",
             "dateshtml": "<span>S</span><span>e</span><span>p</span><span>'</span><span>1</span><span>2&nbsp;</span><span>à&nbsp;</span><span>M</span><span>a</span><span>r</span><span>'</span><span>1</span><span>5</span>",
             "orderindex": 2
         }
@@ -62,6 +75,19 @@
             "description": "<p>Projets pour le site fa&ccedil;ade du Cr&eacute;dit Lyonnais</p><p><span style=\"color: rgb(0, 0, 0);\"><strong>Stack:</strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong>.NET 1.1 and 2.0 host, C #, Oracle, Ajax Libraries, ASP.NET</strong></span></p>",
             "dateshtml": "<span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>5&nbsp;</span><span>à&nbsp;</span><span>J</span><span>a</span><span>n</span><span>'</span><span>0</span><span>7</span>",
             "orderindex": 5
+        }
+    },
+    {
+        "locale": "en-US",
+        "title": "Fullstack Developer Freelance",
+        "metadata": {
+            "title": "Freelancer<br/>Fullstack Developer",
+            "subtitle": "Yertech",
+            "location": "Remote",
+            "dates": "Apr'19 to Now",
+            "description": "<p>Back-end et front-end development full remote<br/> Consulting<br/> Refactoring<br/> Debugging<br/></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>Stack:</strong></span></p><p style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><strong>API .NET, API .NET Core,React.JS, Gatsby.js, SQL Server stored procedures, Entity Framework Core, DB management and optimizations, Elastic search, Redis, Signal Air, Nginx, Varnish, Kibana, Grafana Visual Studio, VS Code, Resharper, Git, GITLAB (+CI), Slack, SCRUM, Kanban</strong></span></p>",
+            "dateshtml": "<span>A</span><span>p</span><span>r</span><span>'</span><span>1</span><span>9&nbsp;</span><span>t</span><span>o&nbsp;</span><span>N</span><span>o</span><span>w</span>",
+            "orderindex": 0
         }
     },
     {

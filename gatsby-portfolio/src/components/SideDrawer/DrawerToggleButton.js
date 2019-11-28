@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import "./DrawerToggleButton.css"
+import './DrawerToggleButton.css'
 
 const drawerToggleButton = props => (
   <button type="button" id="mobile-nav-toggle" onClick={props.click}>

@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Icon } from "rsuite"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Icon } from 'rsuite'
 
 const Work = ({ pageData, serviceData }) => {
   return (
@@ -170,7 +170,7 @@ const Work = ({ pageData, serviceData }) => {
 
 Work.propTypes = {
   pageData: PropTypes.object.isRequired,
-  serviceData: PropTypes.array.isRequired,
+  serviceData: PropTypes.array.isRequired
 }
 
 export default Work

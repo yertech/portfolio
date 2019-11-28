@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactHtmlParser from "react-html-parser"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
 
 const About = ({ btnData, aboutPageData }) => {
   return (
@@ -36,7 +36,7 @@ const About = ({ btnData, aboutPageData }) => {
 
 About.propTypes = {
   btnData: PropTypes.object.isRequired,
-  aboutPageData: PropTypes.object.isRequired,
+  aboutPageData: PropTypes.object.isRequired
 }
 
 export default About

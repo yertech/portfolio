@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactHtmlParser from "react-html-parser"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
 
 const JobHistory = ({ jobsPageData, jobsData }) => {
   return (
@@ -55,7 +55,7 @@ const JobHistory = ({ jobsPageData, jobsData }) => {
 
 JobHistory.propTypes = {
   jobsPageData: PropTypes.object.isRequired,
-  jobsData: PropTypes.array.isRequired,
+  jobsData: PropTypes.array.isRequired
 }
 
 export default JobHistory

@@ -1,11 +1,11 @@
-import React from "react"
-import "./SideDrawer.css"
-import NavMenu from "../NavMenu"
+import React from 'react'
+import './SideDrawer.css'
+import NavMenu from '../NavMenu'
 
 const sideDrawer = props => {
-  let drawerClasses = "side-drawer"
+  let drawerClasses = 'side-drawer'
   if (props.sideDrawerOpen) {
-    drawerClasses = "side-drawer open"
+    drawerClasses = 'side-drawer open'
   }
 
   return (

@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactHtmlParser from "react-html-parser"
-import { useSpring, animated, config } from "react-spring"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
+import { useSpring, animated, config } from 'react-spring'
 
 const Services = ({ servicesPageData, serviceData }) => {
   const contentProps = useSpring({
     from: { opacity: 0 },
     opacity: 1,
-    config: config.molasses,
+    config: config.molasses
   })
 
   return (
@@ -42,7 +42,7 @@ const Services = ({ servicesPageData, serviceData }) => {
 
 Services.propTypes = {
   servicesPageData: PropTypes.object.isRequired,
-  serviceData: PropTypes.array.isRequired,
+  serviceData: PropTypes.array.isRequired
 }
 
 export default Services

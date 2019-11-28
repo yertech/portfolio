@@ -1,41 +1,41 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Projects = ({ projectData }) => {
   const styles = {
     header: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "flex-start",
-      alignItems: "center",
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center'
     },
     container: {
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap'
     },
     title: {
-      paddingRight: "50px",
-      marginRight: "100px",
-      borderRight: "thin solid black",
+      paddingRight: '50px',
+      marginRight: '100px',
+      borderRight: 'thin solid black'
     },
     description: {
-      maxWidth: "400px",
-      fontSize: "1.25rem",
-      margin: "0",
+      maxWidth: '400px',
+      fontSize: '1.25rem',
+      margin: '0'
     },
     details: {
-      height: "400px",
-      width: "400px",
-      padding: "30px",
-      position: "relative",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      alignItems: "flex-start",
-      overflow: "auto",
-      transition: "0.3s ease-in-out",
-    },
+      height: '400px',
+      width: '400px',
+      padding: '30px',
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      overflow: 'auto',
+      transition: '0.3s ease-in-out'
+    }
   }
 
   return (
@@ -76,7 +76,7 @@ const Projects = ({ projectData }) => {
 }
 
 Projects.propTypes = {
-  projectData: PropTypes.array.isRequired,
+  projectData: PropTypes.array.isRequired
 }
 
 export default Projects

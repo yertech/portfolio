@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { useSiteMetadata } from "../components/hooks/use-site-metadata"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import { useSiteMetadata } from '../components/hooks/use-site-metadata'
 
 const NavMenu = ({
   menuData = [],
@@ -9,7 +9,7 @@ const NavMenu = ({
   navClass,
   menuItemClickHandler,
   activeHash,
-  sideDrawerOpen,
+  sideDrawerOpen
 }) => {
   const { languages } = useSiteMetadata()
   return (
@@ -18,14 +18,14 @@ const NavMenu = ({
         <ul className="nav-menu">
           {menuData.map(menu => {
             const toHash =
-              menu.node.metadata.hash === "home"
-                ? "#"
+              menu.node.metadata.hash === 'home'
+                ? '#'
                 : `#${menu.node.metadata.hash}`
             return (
               <li key={menu.node.metadata.title}>
                 <a
                   className={
-                    menu.node.metadata.hash === activeHash ? "active" : ""
+                    menu.node.metadata.hash === activeHash ? 'active' : ''
                   }
                   onClick={() =>
                     menuItemClickHandler(
@@ -45,7 +45,7 @@ const NavMenu = ({
               return (
                 <Link key={lang.slug} className="linkFlag" to={`/${lang.slug}`}>
                   <img
-                    src={"/img/" + lang.localized_name[locale] + ".png"}
+                    src={'/img/' + lang.localized_name[locale] + '.png'}
                   ></img>
                 </Link>
               )
@@ -58,7 +58,7 @@ const NavMenu = ({
 }
 
 NavMenu.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object
 }
 
 export default NavMenu

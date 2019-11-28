@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactHtmlParser from "react-html-parser"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
 
 const Contact = props => {
   return (
@@ -47,7 +47,7 @@ const Contact = props => {
 
 Contact.propTypes = {
   contactPageData: PropTypes.object.isRequired,
-  btnData: PropTypes.object.isRequired,
+  btnData: PropTypes.object.isRequired
 }
 
 export default Contact

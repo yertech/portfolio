@@ -1,22 +1,22 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import Header from "./header"
-import Footer from "./footer"
-import ScrollToTop from "react-scroll-up"
-import "./layout.css"
-import Backdrop from "../components/Backdrop/Backdrop"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import Header from './header'
+import Footer from './footer'
+import ScrollToTop from 'react-scroll-up'
+import './layout.css'
+import Backdrop from '../components/Backdrop/Backdrop'
 
-function Layout(props) {
+function Layout (props) {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
-  const [activeHash, setActiveHash] = useState("home")
+  const [activeHash, setActiveHash] = useState('home')
 
-  function drawerToggleClickHandler() {
+  function drawerToggleClickHandler () {
     setSideDrawerOpen(!sideDrawerOpen)
   }
 
-  function menuItemClickHandler(hash, sideDrawerOpen) {
+  function menuItemClickHandler (hash, sideDrawerOpen) {
     document.querySelector(`#${hash}`).scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth'
     })
 
     if (sideDrawerOpen === true) {
@@ -25,7 +25,7 @@ function Layout(props) {
     setActiveHash(hash)
   }
 
-  function backdropClickHandler() {
+  function backdropClickHandler () {
     setSideDrawerOpen(false)
   }
 
@@ -57,7 +57,7 @@ function Layout(props) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  locale: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired
 }
 
 export default Layout

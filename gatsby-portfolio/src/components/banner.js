@@ -1,14 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactHtmlParser from "react-html-parser"
-import { useSpring, animated, config } from "react-spring"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
+import { useSpring, animated, config } from 'react-spring'
 
 const Banner = ({ btnData, bannerPageData }) => {
   const contentProps = useSpring({
     from: { opacity: 0, marginTop: 200 },
     opacity: 1,
     marginTop: 0,
-    config: config.molasses,
+    config: config.molasses
   })
 
   // <!-- start banner Area -->
@@ -43,7 +43,7 @@ const Banner = ({ btnData, bannerPageData }) => {
 
 Banner.propTypes = {
   btnData: PropTypes.object.isRequired,
-  bannerPageData: PropTypes.object.isRequired,
+  bannerPageData: PropTypes.object.isRequired
 }
 
 export default Banner
