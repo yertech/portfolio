@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-const Footer = ({ siteTitle }) => (
+const Footer = () => (
   <footer className="footer-area">
     <div className="container">
       <div className="row justify-content-center">
@@ -36,8 +36,8 @@ const Footer = ({ siteTitle }) => (
         <p className="col-lg-8 col-sm-12 footer-text">
           Copyright &copy;
           <script>document.write(new Date().getFullYear());</script> All rights
-          reserved | This template is made with{' '}
-          <i className="fa fa-heart-o" aria-hidden="true"></i> by{' '}
+          reserved | This template is made with{" "}
+          <i className="fa fa-heart-o" aria-hidden="true"></i> by{" "}
           <a
             href="https://colorlib.com"
             target="_blank"
@@ -51,8 +51,6 @@ const Footer = ({ siteTitle }) => (
   </footer>
 )
 
-Footer.propTypes = {
-  siteTitle: PropTypes.string.isRequired
-}
+Footer.propTypes = {}
 
 export default Footer
